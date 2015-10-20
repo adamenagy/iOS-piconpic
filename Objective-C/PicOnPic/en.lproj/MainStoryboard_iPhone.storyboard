@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <development version="4500" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="nfp-PS-Tve">
+                                <items>
+                                    <barButtonItem systemItem="camera" id="DNt-1p-A4f">
+                                        <connections>
+                                            <action selector="startCamera:" destination="2" id="T61-lW-6pT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="search" id="IC4-1i-kX8">
+                                        <connections>
+                                            <action selector="findPic:" destination="2" id="Puf-8r-m3E"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="9sn-AC-IaV">
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Wow-Q3-oIZ" appends="YES" id="XoA-3Y-uFs"/>
+                                    <outletCollection property="gestureRecognizers" destination="f8G-QE-3MS" appends="YES" id="fp9-Pq-h1X"/>
+                                    <outletCollection property="gestureRecognizers" destination="ixY-IB-xgc" appends="YES" id="joC-WY-yVx"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nfp-PS-Tve" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="1ep-yo-A3X"/>
+                            <constraint firstItem="9sn-AC-IaV" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Lmt-ee-Ax8"/>
+                            <constraint firstItem="9sn-AC-IaV" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="Sce-hF-NlH"/>
+                            <constraint firstItem="nfp-PS-Tve" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="Vj9-x7-BEn"/>
+                            <constraint firstItem="9sn-AC-IaV" firstAttribute="bottom" secondItem="nfp-PS-Tve" secondAttribute="top" type="default" id="YMb-8E-doD"/>
+                            <constraint firstItem="9sn-AC-IaV" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="o4j-g4-qI3"/>
+                            <constraint firstItem="nfp-PS-Tve" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="v6E-QM-YGt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="9sn-AC-IaV" id="w6c-CR-FMl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="Wow-Q3-oIZ">
+                    <connections>
+                        <action selector="pinch:" destination="2" id="QOK-85-HCD"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="f8G-QE-3MS">
+                    <connections>
+                        <action selector="rotate:" destination="2" id="mhy-Ua-GIe"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="ixY-IB-xgc">
+                    <connections>
+                        <action selector="pan:" destination="2" id="bsi-r2-PJ9"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
