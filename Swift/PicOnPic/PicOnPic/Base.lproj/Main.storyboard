@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PicOnPic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tq8-gQ-kiS">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1U7-Ih-xGL">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <subviews>
+                                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="pHF-Z1-qaR">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                                <items>
+                                                    <barButtonItem systemItem="camera" id="TUo-tu-k86">
+                                                        <connections>
+                                                            <action selector="startCamera:" destination="BYZ-38-t0r" id="v2h-Gf-qO7"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem systemItem="search" id="ZbP-wg-mb4">
+                                                        <connections>
+                                                            <action selector="findPic:" destination="BYZ-38-t0r" id="Cur-II-YC3"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                </items>
+                                            </toolbar>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="u3Y-bd-pEy">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2qD-pD-qyd" appends="YES" id="Szx-XQ-hJE"/>
+                                    <outletCollection property="gestureRecognizers" destination="P8T-gt-Yet" appends="YES" id="IAp-wl-9Eh"/>
+                                    <outletCollection property="gestureRecognizers" destination="7Jj-Ba-TQ1" appends="YES" id="8Pp-c8-YDd"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u3Y-bd-pEy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="J1b-Ib-jxu"/>
+                            <constraint firstItem="tq8-gQ-kiS" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="J3U-ax-I7d"/>
+                            <constraint firstItem="tq8-gQ-kiS" firstAttribute="top" secondItem="u3Y-bd-pEy" secondAttribute="bottom" id="T4N-Sr-z70"/>
+                            <constraint firstAttribute="trailing" secondItem="tq8-gQ-kiS" secondAttribute="trailing" id="TUr-c3-sY1"/>
+                            <constraint firstItem="tq8-gQ-kiS" firstAttribute="leading" secondItem="u3Y-bd-pEy" secondAttribute="leading" id="c9D-38-dOv"/>
+                            <constraint firstItem="tq8-gQ-kiS" firstAttribute="trailing" secondItem="u3Y-bd-pEy" secondAttribute="trailing" id="md4-yb-skL"/>
+                            <constraint firstItem="tq8-gQ-kiS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rjl-ah-Ymw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="u3Y-bd-pEy" id="DVy-ex-tdL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="7Jj-Ba-TQ1">
+                    <connections>
+                        <action selector="pan:" destination="BYZ-38-t0r" id="lP1-7Q-Nqi"/>
+                        <outlet property="delegate" destination="u3Y-bd-pEy" id="TrK-NY-XK1"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="2qD-pD-qyd">
+                    <connections>
+                        <action selector="pinch:" destination="BYZ-38-t0r" id="vwF-K0-GoJ"/>
+                        <outlet property="delegate" destination="u3Y-bd-pEy" id="5CL-0F-xKe"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="P8T-gt-Yet">
+                    <connections>
+                        <action selector="rotate:" destination="BYZ-38-t0r" id="MqN-3p-dO0"/>
+                        <outlet property="delegate" destination="u3Y-bd-pEy" id="shv-r4-hfN"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="256" y="377"/>
+        </scene>
+    </scenes>
+</document>

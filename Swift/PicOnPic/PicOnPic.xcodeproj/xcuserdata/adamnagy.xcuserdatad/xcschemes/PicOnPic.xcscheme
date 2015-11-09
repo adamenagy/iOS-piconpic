@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F7EEC3591633482400D20BC9"
+               BlueprintIdentifier = "F79DAF191BF0EA09004C0ADB"
                BuildableName = "PicOnPic.app"
                BlueprintName = "PicOnPic"
                ReferencedContainer = "container:PicOnPic.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F7EEC3591633482400D20BC9"
+            BlueprintIdentifier = "F79DAF191BF0EA09004C0ADB"
             BuildableName = "PicOnPic.app"
             BlueprintName = "PicOnPic"
             ReferencedContainer = "container:PicOnPic.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F7EEC3591633482400D20BC9"
+            BlueprintIdentifier = "F79DAF191BF0EA09004C0ADB"
             BuildableName = "PicOnPic.app"
             BlueprintName = "PicOnPic"
             ReferencedContainer = "container:PicOnPic.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F7EEC3591633482400D20BC9"
+            BlueprintIdentifier = "F79DAF191BF0EA09004C0ADB"
             BuildableName = "PicOnPic.app"
             BlueprintName = "PicOnPic"
             ReferencedContainer = "container:PicOnPic.xcodeproj">

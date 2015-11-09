@@ -140,7 +140,7 @@
 		F7EEC3511633482400D20BC9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Adam Nagy";
 			};
 			buildConfigurationList = F7EEC3541633482400D20BC9 /* Build configuration list for PBXProject "PicOnPic" */;
@@ -228,6 +228,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -275,6 +276,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PicOnPic/PicOnPic-Prefix.pch";
 				INFOPLIST_FILE = "PicOnPic/PicOnPic-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autodesk.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -286,6 +288,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PicOnPic/PicOnPic-Prefix.pch";
 				INFOPLIST_FILE = "PicOnPic/PicOnPic-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autodesk.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -310,6 +313,7 @@
 				F7EEC3831633482400D20BC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
